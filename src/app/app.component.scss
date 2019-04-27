@@ -1,0 +1,20 @@
+app-root {
+    grid-column-start: 2;
+    grid-column-end: 7;
+}
+
+app-main-tracker {
+    color: white;
+}
+
+app-user-info {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 30px;
+}

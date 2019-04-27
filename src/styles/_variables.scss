@@ -1,0 +1,27 @@
+@mixin noSellection {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@mixin shadowText {
+    text-shadow: 0.5px 0.5px 0.5px rgb(66, 66, 66);
+}
+
+%yellowSelection {
+    ::selection {
+        background: rgba(255, 255, 0, 0.45);
+    }
+    
+    ::-moz-selection {
+        background: rgba(255, 255, 0, 0.45);
+    }
+}
+
+%textElementsMargin0 {
+    p, h1, h2, h3, h4, h5, h6 {
+        margin: 0px;
+    }
+
+}

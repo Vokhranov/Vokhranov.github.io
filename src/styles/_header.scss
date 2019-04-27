@@ -1,0 +1,18 @@
+header {
+    margin: 0px 0px 30px 0px;
+    
+    grid-column-start: 1;
+    grid-column-end: -1;
+    
+    .additional {
+        height: 40px;
+
+        a {
+            @include noSellection;
+        }
+        
+        img {
+            height: 100%;
+        }
+    }
+}

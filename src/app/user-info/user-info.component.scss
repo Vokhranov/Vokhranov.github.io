@@ -1,0 +1,89 @@
+
+#periodInterval {
+
+    label {
+        font-size: 14px;
+        font-style: italic; 
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        align-items: center;
+        grid-column-gap: 120px;
+
+        .fromBlk {
+            grid-column: 1;
+            justify-self: right;
+        }
+
+        .toBlk {
+            grid-column: 2;
+            justify-self: left;
+        }
+    }
+}
+
+.general {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-content: center;
+}
+
+#tasksInfo {
+    padding: 10px;
+    
+    .task {
+        display: grid;
+        grid-template-columns: 60px 1fr;        
+        grid-column-gap: 10px;
+        
+        align-items: center;
+        justify-items: left;
+
+        margin: 5px 0px;
+        padding: 0px 10px;
+        background: rgba(100, 100, 100, 0.5);
+
+        div {
+            padding: 5px;
+        }
+        
+        p {
+            font-weight: normal;
+        }
+        
+        .duration {
+            grid-column: 1;
+        }
+        
+        .title {
+            grid-column: 2;
+            justify-self: left;
+            font-style: italic;
+        }
+    }
+}
+
+#chartBlk {
+
+    label {
+        font-size: 18px;
+    }
+
+    form {
+        margin: 10px;
+    }
+    
+    .chart {
+        background: rgba(100, 100, 100, 0.5);
+        height: 300px;
+        // temporary:
+        display: grid;
+        align-items: center;
+        justify-items: center;
+    }
+}
