@@ -61,8 +61,24 @@ export class PrevActivityComponent implements OnInit {
     return resultClasses;
   }
 
-  close() {
+  doClose() {
     this.needClose.emit();
+  }
+
+  entered() {
+    console.log("entered entered()");
+  }
+
+  left() {
+    console.log("entered left()");
+  }
+
+  beforeClose() {
+    console.log("entered beforeClose()");
+  }
+
+  afterClose() {
+    console.log("entered afterClose()");
   }
 
 }

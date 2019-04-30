@@ -1,4 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { PrevActivityComponent } from './prev-activity/prev-activity.component'
+
 
 @Component({
   selector: 'app-choose-activity',
@@ -7,6 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ChooseActivityComponent implements OnInit {
 
+  @ViewChild(PrevActivityComponent) private prevActivityComponent : PrevActivityComponent;
   @Input() allowPreviousActivity : boolean = true;
 
   showPreviousDialog : boolean = false;
@@ -19,10 +22,17 @@ export class ChooseActivityComponent implements OnInit {
   showPrevious() {
     // switch flag
     this.showPreviousDialog = (this.showPreviousDialog) ? false : true;
+    if(this.showPreviousDialog) {
+      this.prevActivityComponent.entered();
+    } else {
+      this.prevActivityComponent.left();
+    }
   }
 
   closePrevious() {
+    this.prevActivityComponent.beforeClose();
     this.showPreviousDialog = false;
+    this.prevActivityComponent.afterClose();
   }
 
 }

@@ -3,7 +3,7 @@
     [ngClass] = "setTheme()">
   <div class="head">
     <h4>{{title}}</h4>
-    <img (click)="close()" src="../../../../assets/img/icons/close.png" alt="close">
+    <img (click)="doClose()" src="../../../../assets/img/icons/close.png" alt="close">
   </div>
   <mat-action-list>
     <button mat-list-item (click)="sellect()" *ngFor="let activity of activities">
