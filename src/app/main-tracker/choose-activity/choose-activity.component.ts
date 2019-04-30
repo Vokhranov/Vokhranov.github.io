@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-choose-activity',
@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChooseActivityComponent implements OnInit {
 
+  @Input() allowPreviousActivity : boolean = true;
+
+  showPreviousDialog : boolean = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  showPrevious() {
+    // switch flag
+    this.showPreviousDialog = (this.showPreviousDialog) ? false : true;
+  }
+
+  closePrevious() {
+    this.showPreviousDialog = false;
   }
 
 }

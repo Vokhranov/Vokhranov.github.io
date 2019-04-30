@@ -1,5 +1,22 @@
 <form class="interaction">
   <label for="activity">Start activity:</label>
-  <input type="text" id="activity"/>
-  <button>Start</button>
+  <div class="input">
+    <input type="text" id="activity"/>
+    <div class="arrow" 
+        [style.display] = "allowPreviousActivity ? 'block' : 'none'"
+        (click)="showPrevious()">
+      <img [class.rotate]="showPreviousDialog" src="../../../assets/img/icons/rightArrow.png" alt="choose">
+    </div>
+    <app-prev-activity
+      [show] = "showPreviousDialog"
+      [closable] = "false"
+      [theme] = "'dark'"
+      [title] = "'Previous activities'"
+      
+      
+      (needClose) = "closePrevious()"
+      >
+    </app-prev-activity>
+  </div>
+  <button class="awesomeBtn">Start</button>
 </form>

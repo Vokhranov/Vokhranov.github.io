@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatListModule } from '@angular/material/list';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +15,7 @@ import { TabsComponent } from './user-info/tabs/tabs.component';
 import { ActivityComponent } from './user-info/tabs/activity/activity.component';
 import { ChartComponent } from './user-info/tabs/chart/chart.component';
 import { PrevActivityComponent } from './main-tracker/choose-activity/prev-activity/prev-activity.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +28,15 @@ import { PrevActivityComponent } from './main-tracker/choose-activity/prev-activ
     TabsComponent,
     ActivityComponent,
     ChartComponent,
-    PrevActivityComponent
+    PrevActivityComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatTabsModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

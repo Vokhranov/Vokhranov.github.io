@@ -5,6 +5,13 @@
     justify-items: center;
 }
 
+app-header {
+    grid-row: 1;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    width: 100%;
+}
+
 .wrapper {
     grid-row: 2;
     grid-column-start: 2;
@@ -14,6 +21,7 @@
 }
 
 app-main-tracker {
+    font-size: 30px;
     color: white;
 }
 
