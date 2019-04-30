@@ -1,10 +1,46 @@
 @import "../../styles/variables";
 
 header {
-    margin: 0px 0px 30px 0px;    
+    padding: 5px;   
     display: grid;
-    justify-items: right;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-items: center;
+    align-items: center;
+
+    .logo {
+        margin: 0px 20px;
+        height: 40px;
+        grid-column: 1;        
+        justify-self: left;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .menu {
+        grid-column: 2;
+        display: flex;
+        justify-content: center;
+
+        a {
+            text-decoration: none;
+            color: rgb(135, 135, 135);
+            margin: 10px 40px;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 10px;
+        }
+
+        .active {
+            color: rgb(110, 110, 110);
+            border-bottom: 2px solid orange;
+        }
+    }
+
     .additional {
+        grid-column: 3;
+        justify-self: right;
         height: 40px;
 
         a {

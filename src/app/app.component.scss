@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: 1fr, 1fr;
+    grid-row-gap: 35px;
     justify-items: center;
 }
 
@@ -18,21 +19,4 @@ app-header {
     grid-column-end: -2;
     grid-row-gap: 40px;
     width: 100%;
-}
-
-app-main-tracker {
-    font-size: 30px;
-    color: white;
-}
-
-app-user-info {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    font-weight: bold;
-    padding: 15px;
-
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-row-gap: 30px;
 }

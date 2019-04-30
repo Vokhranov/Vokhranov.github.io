@@ -1,7 +1,7 @@
 <form class="interaction">
   <label for="activity">Start activity:</label>
   <div class="input">
-    <input type="text" id="activity"/>
+    <input type="text" id="activity" autocomplete="off"/>
     <div class="arrow" 
         [style.display] = "allowPreviousActivity ? 'block' : 'none'"
         (click)="showPrevious()">
