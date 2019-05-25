@@ -10,27 +10,18 @@
     bottom: 0px;
 
     .head {
-        border-bottom: 1px solid grey;
-        display: grid;
-        grid-template-columns: 1fr, auto 1fr;
+        border-bottom: 1px solid grey;        
 
         h4 {
             text-align: center;
             padding: 5px;
-            grid-column: 2;
         }
 
-        img {
-            height: 10px;
-            width: auto;
-            grid-column: 3;
-            margin: 8px;
-            justify-self: right;
-            cursor: pointer;
+        .closeImg {
+            display: none;
         }
     
-    }
-  
+    }  
 
     button {
         font-style: italic;
@@ -40,6 +31,29 @@
         background-color: rgba(150, 150, 150, 0.5);
     }
 
+}
+
+.closable {
+
+    .head {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr, auto 1fr;
+
+        h4 {
+            grid-column: 2;
+        }
+
+        .closeImg { 
+            display: block; 
+            height: 10px;
+            width: auto;
+            margin: 8px;
+            justify-self: right;
+            cursor: pointer;
+            grid-column: 3;
+        }
+    }
 }
 
 .light {

@@ -5,11 +5,11 @@
     <div class="arrow" 
         [style.display] = "allowPreviousActivity ? 'block' : 'none'"
         (click)="showPrevious()">
-      <img [class.rotate]="showPreviousDialog" src="../../../assets/img/icons/rightArrow.png" alt="choose">
+      <img [class.rotate]="showPreviousDialog" src="./assets/img/icons/rightArrow.png" alt="choose">
     </div>
     <app-prev-activity
       [show] = "showPreviousDialog"
-      [closable] = "false"
+      [closable] = "true"
       [theme] = "'dark'"
       [title] = "'Previous activities'"
       

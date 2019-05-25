@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { PrevActivityComponent } from './prev-activity/prev-activity.component'
 
-
 @Component({
   selector: 'app-choose-activity',
   templateUrl: './choose-activity.component.html',
